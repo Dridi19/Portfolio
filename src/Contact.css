@@ -1,0 +1,16 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+.main-heading{
+    color: white;
+}
+#textaftersend{
+    text-align: center;
+}
+#inactivesection{
+    color:rgba(255,255,255,.55) ;
+}
+#activesection{
+    color:white ;
+}

@@ -1,38 +1,264 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section > #inactive{
+  display: none;
+  color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: #2a2a2a;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+/* home */
+#home{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.home-pic{
+  border-radius: 100%;
+  height: 300px;
+  min-height: 300px;
+  min-width: 300px;
+  position: relative;
+  width: 300px;
+}
+h1{
   color: white;
 }
+.home-img{
+  animation: morph 8s ease-in-out 1s infinite;
+    background-blend-mode: multiply;
+    background-image: url(img.jpeg)!important;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    bottom: 0;
+    box-shadow: inset 0 0 0 9px hsl(0deg 0% 100% / 30%);
+    left: 0;
 
-.App-link {
-  color: #61dafb;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.home-content{
+  align-items: center;
+  display: flex;
+  
+}
+.home-infos{
+  display: block;
+    height: fit-content;
+    margin-left: 70px;
+}
+.home-name{
+  font-size: 55px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.home-about{
+  color: #aaa;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+/* home */
+@keyframes morph {
+  0% {
+    border-bottom-left-radius: 65% 35%;
+    border-bottom-right-radius: 35% 75%;
+    border-top-left-radius: 65%;
+    border-top-right-radius: 45% 35%;
+  }
+  50% {
+    border-bottom-left-radius: 40% 60%;
+    border-bottom-right-radius: 70% 30%;
+    border-top-left-radius: 30% 50%;
+    border-top-right-radius: 60%;
+  }
+  100% {
+    border-bottom-left-radius: 65% 35%;
+    border-bottom-right-radius: 35% 75%;
+    border-top-left-radius: 65%;
+    border-top-right-radius: 45% 35%;
+}
+  }
+.content > section{
+  margin: 0;
+  padding: 0;
+  grid-column: 2;
+  padding-left: 25px!important;
+  padding-right: 25px!important;
+  
+  
+}
+.me-auto navbar-nav{
+  display: flex;
+  justify-content: flex-end;
+}
+#navbarScroll{
+  justify-content: flex-end;
+}
+.home-socials{
+  display: flex;
+    list-style: none;
+}
+.home-social-item {
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* media */
+
+@media screen and (max-width: 800px) {
+  .home-pic{
+    height: 200px;
+    margin: 0 auto 20px;
+    min-height: 200px;
+    min-width: 200px;
+    width: 200px;
+    max-width: 450px;
   }
-  to {
-    transform: rotate(360deg);
+ 
+  .home-content {
+    display: inline;
+    padding-bottom: 30px;
+    text-align: center;
+
   }
+  .home-infos{
+    margin: 0;
+  }
+  .home-about {
+    color: #aaa;
+    font-style: italic;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.home-socials {
+  display: flex;
+  justify-content: center;
+}
+#topnavbar{
+  width: 100vw;
+    position: fixed;
+    z-index: 999;
+}
+.content > #home {
+  padding-top: 56px;
+}
+}
+@media screen and (max-width: 560px) {
+
+ 
+  .home-content {
+    display: inline;
+    text-align: center;
+    
+  }
+ .home-name{
+  font-size: 35px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.home-about{
+  color: #aaa;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+}
+@media screen and (min-width: 900px) {
+  #home{
+    padding-bottom: 1vh;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #topnavbar{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    
+  }
+}
+@media screen and (min-width: 1200px) {
+  *{
+    box-sizing: border-box;
+  }
+  body{
+    margin:0;
+  }
+  #root{
+    background: red;
+  }
+
+  #topnavbar{
+    background-color: #000;
+    display: grid;
+    font-size: 25px;
+    height: 100vh;
+    left: 0;
+    max-width: 400px;
+    min-height: 100%;
+    min-width: 400px;
+    padding: 0 100px;
+    position: fixed;
+    top: 0;
+    width: 400px;
+    z-index: 900;
+  }
+  .container{
+    
+   
+    display: flex;
+    flex-direction: column;
+  }
+  #navbarScroll{
+    display: flex;
+    flex-direction: column;
+  }
+  .me-auto navbar-nav{
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-nav{
+    display: block;
+  }
+  .nav-link{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .navbar-brand{
+    font-size: 65px;
+  }
+  .content{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100vw - 420px);
+    display: flex;
+    flex-direction: column;
+  }
+  .content > #home {
+    margin: 0;
+    padding: 0;
+    grid-column: 2;
+    height: calc(100vh);
+    
+  }
+
 }

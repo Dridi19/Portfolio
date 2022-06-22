@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import Top from './Top';
+import Content from './Content';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "./App.css"
+import "./about.css"
+const App = () => {
+    const [sectionactive, setsectionactive] = useState("home");
+function activesection(active){
+  setsectionactive(active);
+}
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+    <Top sectionactive={sectionactive} />
+    <Content activesection={activesection}/>
+  </>
+    );
 }
 
 export default App;

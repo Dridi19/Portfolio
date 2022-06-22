@@ -1,0 +1,37 @@
+.m-2{
+    height: auto;
+    width: 30%;
+}
+@media screen and (max-width: 1000px) {
+    .m-2{
+        width: 47%;
+    }
+}
+@media screen and (max-width: 769px) {
+    .m-2{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 560px) {
+    .m-2{
+        width: 100%;
+    }
+}
+.m-2{
+    background: black;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.card-body > p{
+    color: rgba(255, 255, 255, 0.637);
+}
+.card-title{
+    color: white;
+}
+    
+label{
+    color: white;
+}
