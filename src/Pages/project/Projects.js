@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Container ,Card,Row,Button} from 'react-bootstrap';  
-import paint from './paint.png';
-import deadcastel from './logo.png';  
-import python from './merged.png';
-import social from './social.png';    
+import paint from '../../img/paint.png';
+import deadcastel from '../../img/logo.png';  
+import python from '../../img/merged.png';
+import social from '../../img/social.png';    
 import "./Projects.css"
 function Projects({handlesection}) {  
   function handleenter(){
@@ -13,8 +13,8 @@ function Projects({handlesection}) {
   return (
       
 <section className="App" onMouseEnter={handleenter} id="projects">
-  <h2 style={{color:"white"}} >Projets</h2>
   <Container className='p-4'>  
+  <h2 style={{color:"white"}} >Projets</h2>
      <Row>  
      
           <Card  

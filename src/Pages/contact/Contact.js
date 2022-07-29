@@ -9,6 +9,7 @@ function ContactForm() {
   }
   return (
       <div className='container'>
+                <h2 style={{color:"white"}} >Contact</h2>
           <div className='card shadow'>
               <div className='card-body' id="body-card" style={{background:"black"}}>
                   <div className='row'>
@@ -82,7 +83,6 @@ function App({handlesection}) {
       }
   return (
     <section data-aos="fade-up"  onMouseEnter={handleenter} id="Contact" >
-        <h2 style={{color:"white"}} >Contact</h2>
     <ContactForm />
     </section>
   );

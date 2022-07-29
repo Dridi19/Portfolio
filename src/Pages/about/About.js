@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import "./about.css"
 
 export default function About({handlesection}) {
   const info = useRef()
